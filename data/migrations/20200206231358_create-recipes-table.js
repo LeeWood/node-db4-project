@@ -14,7 +14,7 @@ exports.up = function(knex) {
     .createTable('recipe_ingredients', tbl => {
       tbl.integer('recipe_id')
         .unsigned()
-        .notNullable
+        .notNullable()
         .references('recipes.id')
         .onDelete('CASCADE')
         .onUpdate('CASCADE');
